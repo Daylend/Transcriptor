@@ -1,8 +1,18 @@
 // popup.js
 document.getElementById('copyButton').addEventListener('click', () => {
   const textArea = document.getElementById('transcriptText');
+  const button = document.getElementById('copyButton');
+  
   textArea.select();
   document.execCommand('copy');
+  
+  // Trigger animation
+  button.classList.add('clicked');
+  
+  // Remove class after animation completes
+  setTimeout(() => {
+      button.classList.remove('clicked');
+  }, 400); // Duration of the animation
 });
 
 // Request transcript when the popup loads
