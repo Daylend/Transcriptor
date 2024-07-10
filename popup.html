@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Extractor</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            min-width: 400px; /* Minimum width */
+            min-height: 300px; /* Minimum height */
+        }
+        textarea {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #333;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #333; /* Darker element background */
+            color: #fff; /* Light text */
+            resize: none; /* Disable resizing */
+            overflow: auto; /* Ensures scrollability */
+        }
+        button {
+            background-color: #0066cc; /* Blue button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <textarea id="transcriptText" placeholder="Transcript will appear here..." readonly></textarea>
+    <button id="copyButton">Copy to Clipboard</button>
+    <script src="popup.js"></script>
+</body>
+</html>
